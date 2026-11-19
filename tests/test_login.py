@@ -20,5 +20,6 @@ def test_invalid_login(driver):
     login.enter_password("wrong_password")
     login.click_login()
 
-    error = login.get_error_message()
+    # error = login.get_error_message()
+    error = driver.find_element(By.XPATH, "//div[@class='error-message-container error']").text
     assert "Username and password do not match" in error
