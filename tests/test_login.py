@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from pages.login_page import LoginPage
+from page_objects.login_page import LoginPage
 
 def test_valid_login(driver):
     login = LoginPage(driver)
